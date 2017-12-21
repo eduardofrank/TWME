@@ -1,0 +1,62 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
+
+
+############
+### PAGE ###
+############
+page {
+    logo {
+        file = EXT:twme/Resources/Public/Images/logo_twme.png
+#        fileInverted = EXT:twme/Resources/Public/Images/logo-inverted.svg
+        height = 154
+        width = 127
+        alt = TWME
+        linktitle = TWME
+    }
+    favicon {
+        file = EXT:twme/Resources/Public/Icons/favicon.ico
+    }
+    fluidtemplate {
+        layoutRootPath = EXT:twme/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:twme/Resources/Private/Partials/Page/
+        templateRootPath = EXT:twme/Resources/Private/Templates/Page/
+    }
+}
+
+
+##################
+### EXTENSIONS ###
+##################
+plugin.bootstrap_package {
+    view {
+        layoutRootPath = EXT:twme/Resources/Private/Layouts/
+        partialRootPath = EXT:twme/Resources/Private/Partials/
+        templateRootPath = EXT:twme/Resources/Private/Templates/
+    }
+}
+
+
+########################
+### CONTENT ELEMENTS ###
+########################
+plugin.bootstrap_package_contentelements {
+    view {
+        layoutRootPath = EXT:twme/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:twme/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:twme/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+#######################################
+### REMOVE BOOTSTRAP LESS CONSTANTS ###
+#######################################
+plugin.bootstrap_package.settings.less >
+plugin.bootstrap_package.settings.overrideLessVariables >
+
+# From here onward added by Eduardo Frank
+config.admPanel = 0
+

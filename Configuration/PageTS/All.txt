@@ -1,0 +1,7 @@
+#
+# PageTS for TWME
+#
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:twme/Configuration/PageTS/RTE.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:twme/Configuration/PageTS/TCEFORM.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:twme/Configuration/PageTS/TCEMAIN.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:twme/Configuration/PageTS/Mod/WebLayout/BackendLayouts.txt">

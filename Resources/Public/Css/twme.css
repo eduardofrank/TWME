@@ -1,0 +1,32 @@
+p, ul, li, li a, h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  font-family: Montserrat, sans serif;
+}
+
+.navbar-default,
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border:none;
+}
+
+.navbar-default .navbar-nav>li>a, .navbar-default-transition .navbar-nav>li>a, .navbar-default-transition.navbar-transition .navbar-nav>li>a {
+  color: #000;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default-transition .navbar-nav>.active>a, .navbar-default-transition .navbar-nav>.active>a:focus, .navbar-default-transition .navbar-nav>.active>a:hover, .navbar-default-transition.navbar-transition .navbar-nav>.active>a, .navbar-default-transition.navbar-transition .navbar-nav>.active>a:focus, .navbar-default-transition.navbar-transition .navbar-nav>.active>a:hover {
+  color: #000;
+  opacity:1;
+}
+
+@media (min-width: 992px) {
+.navbar-brand-image>img {
+    position: relative;
+    top: 50%;
+    transform: translate(0,-40%);
+    max-height: 95%;
+    width: auto;
+}
+}
+
+div.frame.frame-default.frame-type-carousel.frame-layout-0.frame-space-before-none.frame-space-after-none,
+div.frame.frame-default.frame-type-carousel_small.frame-layout-0.frame-space-before-none.frame-space-after-none {
+  padding:0;
+}

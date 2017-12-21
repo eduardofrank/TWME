@@ -1,0 +1,44 @@
+#############
+#### RTE ####
+#############
+RTE {
+    config {
+        tt_content {
+            bodytext {
+                types {
+                    text {
+                        preset = twme
+                    }
+                    textcolumn {
+                        preset = twme
+                    }
+                    texticon {
+                        preset = twme
+                    }
+                    textmedia {
+                        preset = twme
+                    }
+                    textpic {
+                        preset = twme
+                    }
+                    textteaser {
+                        preset = twme
+                    }
+                    panel {
+                        preset = twme
+                    }
+                }
+            }
+        }
+        tx_bootstrappackage_accordion_item {
+            bodytext {
+                preset = twme
+            }
+        }
+        tx_bootstrappackage_tab_item {
+            bodytext {
+                preset = twme
+            }
+        }
+    }
+}
