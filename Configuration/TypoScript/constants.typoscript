@@ -54,13 +54,13 @@ plugin.bootstrap_package_contentelements {
 #######################################
 ### REMOVE BOOTSTRAP LESS CONSTANTS ###
 #######################################
-plugin.bootstrap_package.settings.less >
-plugin.bootstrap_package.settings.overrideLessVariables >
+#plugin.bootstrap_package.settings.less >
+#plugin.bootstrap_package.settings.overrideLessVariables >
 
 # From here onward added by Eduardo Frank
 config.admPanel = 0
 page.meta.author = Eduardo Frank
 page.theme.breadcrumb = 0
 page.theme.language.enable = 0
-page.theme.copyright.text = © 2017 Travel With ME
+page.theme.copyright.text = © 2017 TravelwithME
 config.headerComment = Based on the TYPO3 Bootstrap Package by Benjamin Kott - http://www.bk2k.info. Integrator: Eduardo Frank.
