@@ -1,10 +1,38 @@
-p, ul, li, li a, h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+p, h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-family: Montserrat, sans serif;
 }
+ul, li, li a {
+    font-family: 'Playfair Display SC', serif;
+}
 
+/**********************/
+/***     NAVBAR     ***/
+/**********************/
 .navbar-default,
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
   border:none;
+}
+
+.navbar-header-border-bottom {
+    height:0;
+}
+
+.navbar-item-text {
+    color:#f3d15e;
+}
+
+.navbar-default .navbar-toggle .icon-bar, .navbar-default-transition .navbar-toggle .icon-bar, .navbar-default-transition.navbar-transition .navbar-toggle .icon-bar {
+    background-color: #f3d15e;
+}
+
+.navbar {
+    background-color: #7e7e7e;
+}
+
+@media (min-width: 992px) {
+    .navbar {
+    height:155px;
+}
 }
 
 .nav li,
@@ -12,17 +40,19 @@ p, ul, li, li a, h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     font-weight:600;
 }
 
-.navbar-default .navbar-nav>li>a, .navbar-default-transition .navbar-nav>li>a, .navbar-default-transition.navbar-transition .navbar-nav>li>a {
-  color: #000;
+.navbar-main>li.active>a>.bar, .navbar-main>li.dropdown.open>a>.bar, .navbar-main>li:hover>a>.bar {
+    top: 0;
+    background-color: #00295b;
 }
 
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default-transition .navbar-nav>.active>a, .navbar-default-transition .navbar-nav>.active>a:focus, .navbar-default-transition .navbar-nav>.active>a:hover, .navbar-default-transition.navbar-transition .navbar-nav>.active>a, .navbar-default-transition.navbar-transition .navbar-nav>.active>a:focus, .navbar-default-transition.navbar-transition .navbar-nav>.active>a:hover {
-  color: #000;
-  opacity:1;
+.frame-type-carousel {
+    padding-top:0;
+    padding-bottom:0;
 }
 
-.navbar-header:after {
-    display: none;
+div.frame.frame-default.frame-type-carousel.frame-layout-0.frame-space-before-none.frame-space-after-none,
+div.frame.frame-default.frame-type-carousel_small.frame-layout-0.frame-space-before-none.frame-space-after-none {
+  padding:0;
 }
 
 @media (min-width: 992px) {
@@ -42,7 +72,47 @@ p, ul, li, li a, h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 }
 
-div.frame.frame-default.frame-type-carousel.frame-layout-0.frame-space-before-none.frame-space-after-none,
-div.frame.frame-default.frame-type-carousel_small.frame-layout-0.frame-space-before-none.frame-space-after-none {
-  padding:0;
+/**  END OF NAVBAR   **/
+
+/***********************/
+/**       FORM        **/
+/***********************/
+
+@media (min-width: 992px) {
+#c4.frame {
+    padding: 0 150px;
 }
+}
+
+/****  END OF FORM  ****/
+
+/**********************/
+/**      FOOTER      **/
+/**********************/
+
+.footer-section {
+    color: #f3d15e;
+    background: #7e7e7e;
+}
+
+.footer-section p {
+    color: #f3d15e;
+    font-family: 'Playfair Display SC', serif;
+}
+/**  END OF FOOTER  **/
+
+/**********************/
+/**       TRIP       **/
+/**********************/
+
+#p4 h3.element-header {
+    font-size:1.2em;
+    font-weight:400;
+}
+
+#p4 h4.element-subheader {
+    font-size:.8em;
+    margin-top:-.6em;
+}
+
+

@@ -40,6 +40,8 @@ config.contentObjectExceptionHandler = 0
 #### FONTS INCLUDES ###
 page.headerData.230 = TEXT
 page.headerData.230.value = <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+page.headerData.240 = TEXT
+page.headerData.240.value = <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,400i,700,700i,900,900i" rel="stylesheet">
 
 #### CSS INCLUDES ###
 page.includeCSS.file1 = EXT:twme/Resources/Public/Css/twme.css
@@ -58,3 +60,60 @@ config {
 #### FORM CONFIGURATION ###
 plugin.tx_form.settings.yamlConfigurations.100 = EXT:twme/Configuration/Form/myFormSetup.yaml
 module.tx_form.settings.yamlConfigurations.100 = EXT:twme/Configuration/Form/myFormSetup.yaml
+
+
+lib.gridelements.defaultGridSetup {
+    columns {
+        default {
+            renderObj = COA
+            renderObj {
+                20 =< tt_content
+            }
+        }
+    }
+}
+plugin.tx_gridelements_pi1 >
+tt_content.gridelements_pi1 >
+tt_content.gridelements_pi1 = FLUIDTEMPLATE
+tt_content.gridelements_pi1 {
+
+    templateName = 3col
+    templateRootPaths {
+        0 = EXT:bootstrap_package/Resources/Private/Templates/ContentElements/
+        10 = EXT:twme/Resources/Private/Templates/ContentElements/
+    }
+    partialRootPaths {
+        0 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements/
+        10 = EXT:twme/Resources/Private/Partials/ContentElements/
+    }
+    layoutRootPaths {
+        0 = EXT:bootstrap_package/Resources/Private/Layouts/ContentElements/
+        10 = EXT:twme/Resources/Private/Layouts/ContentElements/
+    }
+
+    variables {
+        content = USER
+        content {
+            userFunc = GridElementsTeam\Gridelements\Plugin\Gridelements->main
+            setup {
+                default < lib.gridelements.defaultGridSetup
+            }
+        }
+    }
+
+}
+tt_content.gridelements_view < tt_content.gridelements_pi1
+
+tt_content.gridelements_pi1.variables.content.setup {
+    3 < lib.gridelements.defaultGridSetup
+    3 {
+        columns {
+            10 < .default
+            10.wrap = <div class="col-md-4">|</div>
+            20 < .default
+            20.wrap = <div class="col-md-4">|</div>
+            30 < .default
+            30.wrap = <div class="col-md-4">|</div>
+        }
+    }
+}
