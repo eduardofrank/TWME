@@ -102,17 +102,49 @@ div.frame.frame-default.frame-type-carousel_small.frame-layout-0.frame-space-bef
 /**  END OF FOOTER  **/
 
 /**********************/
-/**       TRIP       **/
+/**      TRIPS       **/
 /**********************/
 
-#p4 h3.element-header {
+#p4 h3.element-header,
+#c41 h3.element-header,
+#c45 h3.element-header {
     font-size:1.2em;
     font-weight:400;
 }
 
-#p4 h4.element-subheader {
+#p4 h4.element-subheader,
+#c41 h4.element-subheader,
+#c45 h4.element-subheader {
     font-size:.8em;
     margin-top:-.6em;
 }
 
+/**   END OF TRIPS   **/
 
+/**********************/
+/**       FAQ        **/
+/**********************/
+
+.tx-jsfaq .tx-jsfaq-toggle-show-all,
+.tx-jsfaq .tx-jsfaq-toggle-hide-all,
+.tx-jsfaq .tx-jsfaq-toggle-show-category-all,
+.tx-jsfaq .tx-jsfaq-toggle-hide-category-all {
+    background-color: #00295b !important;
+    color:#f3d15e !important;
+}
+
+.tx-jsfaq .tx-jsfaq-header.tx-jsfaq-toggle-plus::after,
+.tx-jsfaq .tx-jsfaq-header.tx-jsfaq-toggle-plus::before {
+    background-color: #00295b !important;
+}
+.tx-jsfaq .tx-jsfaq-header.tx-jsfaq-toggle-minus {
+    background-color: #00295b !important;
+    color:#f3d15e !important;
+}
+
+.tx-jsfaq .tx-jsfaq-header {
+    color: #00295b !important;
+}
+.toggale {
+    color: #00295b !important;
+}
