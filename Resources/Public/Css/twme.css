@@ -51,7 +51,8 @@ ul, li, li a {
 }
 
 div.frame.frame-default.frame-type-carousel.frame-layout-0.frame-space-before-none.frame-space-after-none,
-div.frame.frame-default.frame-type-carousel_small.frame-layout-0.frame-space-before-none.frame-space-after-none {
+div.frame.frame-default.frame-type-carousel_small.frame-layout-0.frame-space-before-none.frame-space-after-none,
+.frame.frame-type-carousel_fullscreen {
   padding:0;
 }
 
@@ -87,36 +88,115 @@ div.frame.frame-default.frame-type-carousel_small.frame-layout-0.frame-space-bef
 /****  END OF FORM  ****/
 
 /**********************/
-/**      FOOTER      **/
-/**********************/
-
-.footer-section {
-    color: #f3d15e;
-    background: #7e7e7e;
-}
-
-.footer-section p {
-    color: #f3d15e;
-    font-family: 'Playfair Display SC', serif;
-}
-/**  END OF FOOTER  **/
-
-/**********************/
 /**      TRIPS       **/
 /**********************/
 
-#p4 h3.element-header,
-#c41 h3.element-header,
-#c45 h3.element-header {
+#p1 h3.element-header,
+#p4 h3.element-header {
     font-size:1.2em;
     font-weight:400;
 }
 
-#p4 h4.element-subheader,
-#c41 h4.element-subheader,
-#c45 h4.element-subheader {
+#p1 h4.element-subheader,
+#p4 h4.element-subheader {
     font-size:.8em;
     margin-top:-.6em;
+}
+
+/******* TRIP SUBPAGES *******/
+
+#p18 .frame,
+#p19 .frame {
+    padding:0;
+    margin-bottom:0;
+}
+
+
+#p18 .col-md-4,
+#p19 .col-md-4 {
+    padding:0;
+}
+
+#p18 .frame-inner,
+#p19 .frame-inner {
+    overflow:hidden;
+    clear:both;
+}
+
+.col-xs-12 {
+    height:100%;
+    display:table-cell;
+}
+
+#p18 .image,
+#p19 .image {
+    margin-bottom:0;
+}
+
+#p18 p,
+#p19 p {
+    margin: 0;
+    padding:0 2em;
+    font-size:0.85em;
+}
+
+#p18 p:first-of-type,
+#p19 p:first-of-type {
+    margin: 0;
+    padding:1em 2em 0;
+}
+
+#p18 p:last-child,
+#p19 p:last-child {
+    margin: 0;
+    padding-bottom:1em;
+}
+
+#p18 h2,
+#p19 h2 {
+    font-size:1.5em;
+    margin-bottom:1.5em;
+}
+
+#p18 h4,
+#p19 h4 {
+    margin-top:1em;
+    margin-bottom:0;
+}
+
+#p18 .footer-section p,
+#p19 .footer-section p {
+    font-size:16px;
+}
+
+@media (max-width:1199px) {
+#p18 p,
+#p19 p {
+    font-size:12px;
+}
+}
+
+/***** TRIPS MENU *****/
+#c64 ul {
+    text-align: center;
+    margin:0 auto;
+    -webkit-padding-start:0;
+    -moz-padding-start:0;
+}
+
+#c64 a {
+    font-family: Montserrat, sans serif;
+    font-weight:400;
+    font-size:.75em;
+}
+
+#c64 ul li {
+    display:inline;
+    margin-right:1em;
+}
+
+#c64.frame>:last-child {
+    margin-bottom:2em;
 }
 
 /**   END OF TRIPS   **/
@@ -131,6 +211,7 @@ div.frame.frame-default.frame-type-carousel_small.frame-layout-0.frame-space-bef
 .tx-jsfaq .tx-jsfaq-toggle-hide-category-all {
     background-color: #00295b !important;
     color:#f3d15e !important;
+    background-image: none !important;
 }
 
 .tx-jsfaq .tx-jsfaq-header.tx-jsfaq-toggle-plus::after,
@@ -148,3 +229,105 @@ div.frame.frame-default.frame-type-carousel_small.frame-layout-0.frame-space-bef
 .toggale {
     color: #00295b !important;
 }
+
+/**********************/
+/**      FOOTER      **/
+/**********************/
+
+.footer-section {
+    color: #f3d15e;
+    background: #7e7e7e;
+}
+
+.footer-section p {
+    margin:0;
+    padding:0;
+    color: #f3d15e;
+    font-family: 'Playfair Display SC', serif;
+}
+
+.footer-section p:first-of-type {
+    margin:0 !important;
+    padding:0 !important;
+}
+
+.footer-section-content-column-left p a {
+    font-family: Montserrat, sans serif;
+    margin:0;
+    padding:0;
+    color:#f3d15e;
+}
+
+.footer-section-content-column-left p a:hover {
+    font-family: Montserrat, sans serif;
+    margin:0;
+    padding:0;
+    color:#00295b;
+    text-decoration:none;
+}
+
+.footer-section-content-column-middle ul {
+    margin:0;
+    padding:0;
+}
+
+.footer-section-content-column-middle li {
+    list-style-type:none;
+}
+
+.footer-section-content-column-middle li a {
+    font-family: Montserrat, sans serif;
+    margin:0;
+    padding:0;
+    color:#f3d15e;
+}
+
+.footer-section-content-column-middle li a:hover {
+    font-family: Montserrat, sans serif;
+    margin:0;
+    padding:0;
+    color:#00295b;
+    text-decoration:none;
+}
+
+@media (min-width: 1200px) {
+.footer-section.section {
+    padding-top: 1.5em;
+    padding-bottom: 0em;
+}
+.footer-section h4 {
+    margin-bottom:0.5em !important;
+}
+}
+
+@media (min-width: 992px) {
+.footer-section.section {
+    padding-top: 1.5em;
+    padding-bottom: 0;
+}
+.footer-section h4 {
+    margin-bottom:0.5em !important;
+}
+}
+
+@media (min-width: 768px) {
+.footer-section.section {
+    padding-top: 1.5em;
+    padding-bottom: 0;
+}
+.footer-section h4 {
+    margin-bottom:0.5em !important;
+}
+}
+
+@media (max-width: 767px) {
+.footer-section-content-column-middle {
+    padding-top: 2em;
+    padding-bottom: 0;
+}
+.footer-section h4 {
+    margin-bottom:0.5em !important;
+}
+}
+/**  END OF FOOTER  **/
+
