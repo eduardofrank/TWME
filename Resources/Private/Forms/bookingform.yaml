@@ -1,0 +1,706 @@
+
+renderingOptions:
+  submitButtonLabel: Submit
+type: Form
+identifier: bookingform
+label: 'booking form'
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: booking
+      recipientAddress: info@gotravelwithme.com
+      recipientName: 'Marvena Edmond'
+      senderAddress: '{text-13}'
+      senderName: '{text-1} {text-3}'
+      replyToAddress: '{text-13}'
+      carbonCopyAddress: ''
+      blindCarbonCopyAddress: ''
+      format: html
+      attachUploads: 'true'
+      translation:
+        language: ''
+    identifier: EmailToReceiver
+  -
+    options:
+      pageUid: '22'
+      additionalParameters: ''
+    identifier: Redirect
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-1
+    label: 'Personal Information & Trip'
+    renderables:
+      -
+        type: GridRow
+        identifier: gridrow-1
+        label: 'Grid: Row'
+        renderables:
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-1
+            label: 'First Name'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '3'
+                  md:
+                    numbersOfColumnsToUse: '3'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-2
+            label: 'Middle Name '
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+                placeholder: '(If no middle name add N/A)'
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '3'
+                  md:
+                    numbersOfColumnsToUse: '3'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-3
+            label: 'Last Name'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '3'
+                  md:
+                    numbersOfColumnsToUse: '3'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            properties:
+              options:
+                Male: Male
+                Female: Female
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+              fluidAdditionalAttributes:
+                required: required
+              prependOptionLabel: 'Please select:'
+            type: SingleSelect
+            identifier: singleselect-1
+            label: Gender
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            properties:
+              dateFormat: mm-dd-yyyy
+              enableDatePicker: 'false'
+              displayTimeSelector: 'false'
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+              fluidAdditionalAttributes:
+                required: required
+            type: DatePicker
+            identifier: datepicker-1
+            label: 'Date of birth'
+            validators:
+              -
+                identifier: NotEmpty
+              -
+                identifier: DateTime
+          -
+            properties:
+              options:
+                Bali: 'Bali & Dubai'
+                Malawi: 'Malawi Service Trip'
+                Seychelles: Seychelles
+              prependOptionLabel: 'Please select your destination:'
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '12'
+                  md:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+              fluidAdditionalAttributes:
+                required: required
+            type: SingleSelect
+            identifier: singleselect-2
+            label: 'Choose your Trip'
+            validators:
+              -
+                identifier: NotEmpty
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-2
+    label: 'Passport Details'
+    renderables:
+      -
+        type: GridRow
+        identifier: gridrow-2
+        label: 'Grid: Row'
+        renderables:
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-4
+            label: 'Passport Number'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: Alphanumeric
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-5
+            label: 'Issued by '
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            properties:
+              dateFormat: mm-dd-yyyy
+              enableDatePicker: 'false'
+              displayTimeSelector: 'false'
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+              fluidAdditionalAttributes:
+                required: required
+            type: DatePicker
+            identifier: datepicker-2
+            label: 'Passport Issue Date'
+            validators:
+              -
+                identifier: NotEmpty
+              -
+                identifier: DateTime
+          -
+            properties:
+              dateFormat: mm-dd-yyyy
+              enableDatePicker: 'false'
+              displayTimeSelector: 'false'
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+              fluidAdditionalAttributes:
+                required: required
+            type: DatePicker
+            identifier: datepicker-3
+            label: 'Passport Expiration Date'
+            validators:
+              -
+                identifier: NotEmpty
+              -
+                identifier: DateTime
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-6
+            label: Citizenship
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            properties:
+              options:
+                'Yes': 'Yes'
+                'No': 'No'
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+              fluidAdditionalAttributes:
+                required: required
+            type: RadioButton
+            identifier: radiobutton-1
+            label: 'Does your passport contain at least two blank pages?'
+            validators:
+              -
+                identifier: NotEmpty
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-3
+    label: 'Mailing address'
+    renderables:
+      -
+        type: GridRow
+        identifier: gridrow-3
+        label: 'Grid: Row'
+        renderables:
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-7
+            label: 'Street address 1'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-8
+            label: 'Street address 2'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-9
+            label: City
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '3'
+                  md:
+                    numbersOfColumnsToUse: '3'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-10
+            label: State
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  md:
+                    numbersOfColumnsToUse: '3'
+                  lg:
+                    numbersOfColumnsToUse: '3'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-11
+            label: 'Zip Code'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '3'
+                  md:
+                    numbersOfColumnsToUse: '3'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-12
+            label: 'Mobile number'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-13
+            label: 'e-mail address'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
+              -
+                identifier: EmailAddress
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-4
+    label: 'Personal Preferences'
+    renderables:
+      -
+        type: GridRow
+        identifier: gridrow-4
+        label: 'Grid: Row'
+        renderables:
+          -
+            properties:
+              options:
+                None: None
+                Vegetarian: Vegetarian
+                Vegan: Vegan
+                Kosher: Kosher
+                Gluten-free: Gluten-free
+                Other: Other
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+              fluidAdditionalAttributes:
+                required: required
+            type: RadioButton
+            identifier: radiobutton-2
+            label: 'Dietary Restrictions '
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            properties:
+              options:
+                Smoking: Smoking
+                Non-smoking: Non-smoking
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+              fluidAdditionalAttributes:
+                required: required
+            type: RadioButton
+            identifier: radiobutton-3
+            label: 'Room Type'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            properties:
+              options:
+                Aisle: Aisle
+                Window: Window
+                None: None
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+              fluidAdditionalAttributes:
+                required: required
+            type: RadioButton
+            identifier: radiobutton-4
+            label: 'Flight Seating Preference'
+            validators:
+              -
+                identifier: NotEmpty
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-5
+    label: 'Emergency Contact Information'
+    renderables:
+      -
+        type: GridRow
+        identifier: gridrow-5
+        label: 'Grid: Row'
+        renderables:
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-14
+            label: 'First Name'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-15
+            label: 'Last Name'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-16
+            label: 'Phone number'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-17
+            label: 'e-mail address'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
+              -
+                identifier: EmailAddress
+      -
+        type: Checkbox
+        identifier: checkbox-1
+        label: 'I confirm that I have reviewed the above the information for completeness and accuracy.'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        type: Checkbox
+        identifier: checkbox-2
+        label: 'Yes, I agree to the Terms and Conditions as outlined by TravelwithME'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: Submitt
+    type: SummaryPage
+    identifier: summarypage-1
+    label: Summary
